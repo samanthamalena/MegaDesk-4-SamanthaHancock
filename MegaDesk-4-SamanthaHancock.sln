@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaDesk-3-SamanthaHancock", "MegaDesk-3-SamanthaHancock\MegaDesk-3-SamanthaHancock.csproj", "{A7386A34-E255-4458-AD35-BDA7F2A4504D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaDesk-4-SamanthaHancock", "MegaDesk-4-SamanthaHancock\MegaDesk-4-SamanthaHancock.csproj", "{A7386A34-E255-4458-AD35-BDA7F2A4504D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
