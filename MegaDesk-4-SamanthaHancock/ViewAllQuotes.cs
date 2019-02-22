@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MegaDesk_3_SamanthaHancock
 {
@@ -15,19 +16,44 @@ namespace MegaDesk_3_SamanthaHancock
         public ViewAllQuotes()
         {
             InitializeComponent();
+
+            loadGrid();
+                       
         }
 
-        private void returnButton_Click(object sender, EventArgs e)
+        private void butCancel_Click(object sender, EventArgs e)
         {
-            MainMenu addReturnButton = new MainMenu();
-            addReturnButton.Tag = this;
-            addReturnButton.Show(this);
-            Hide();
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+            Close();
+        }
+       
+        private void loadGrid()
+        {
+            try
+            {
+                string[] deskQuotes = File.ReadAllLines(@"quotes.txt");
+
+                foreach (string deskQuote in deskQuotes)
+                {
+                    string[] arrRow = deskQuote.Split(new char[] { ',' });
+
+                    quotesGrid.Rows.Add(arrRow);
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("No Quotes have been created.");
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void ViewAllQuotes_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
         }
     }
+
+
 }
+

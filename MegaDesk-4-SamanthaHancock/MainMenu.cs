@@ -17,12 +17,7 @@ namespace MegaDesk_3_SamanthaHancock
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+         private void button1_Click(object sender, EventArgs e)
         {
             AddQuote addNewQuoteForm = new AddQuote();
             addNewQuoteForm.Tag = this;
@@ -32,7 +27,7 @@ namespace MegaDesk_3_SamanthaHancock
 
         private void cancelQuoteButton_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void viewQuotes_Click(object sender, EventArgs e)
